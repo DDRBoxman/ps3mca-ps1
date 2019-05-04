@@ -16,7 +16,7 @@
  */
 
 #include <stdio.h>
-#include <libusb-1.0/libusb.h>
+#include <libusb.h>
 #include <stdint.h>
 #include <string.h>
 #include <time.h>
@@ -67,7 +67,7 @@ int open_ps3mca()
   /* Check whether a kernel driver is attached to interface #0. If so, we'll 
    * need to detach it.
    */
-  if (libusb_kernel_driver_active(handle, 0))
+  /*if (libusb_kernel_driver_active(handle, 0))
   {
     res = libusb_detach_kernel_driver(handle, 0);
     if (res == 0)
@@ -79,7 +79,7 @@ int open_ps3mca()
       fprintf(stderr, "Error detaching kernel driver.\n");
       return 1;
     }
-  }
+  }*/
 
   /* Claim interface #0. */
   res = libusb_claim_interface(handle, 0);

@@ -5,16 +5,17 @@ The PS2 cards (SCPH-10020) and compatible is NOT supported (see doc/FAQ).
 
 ## Requirements
 
-* libusb 1.0;
 * PlayStation 3 Memory Card Adaptor CECHZM1 (SCPH-98042) or similar;
 * PS1 memory card, PocketStation and maybe other cards or device (like the MEMORY DISK DRIVE).
 
 ## Compiling
 
-make
+Run cmake and open in visual studio
 
-By default, the flags for libusb are looked up via pkg-config; these can be overridden by setting the CFLAGS and LDFLAGS environment variables.
+Use Zadig to install the WinUSB Driver to the memory card device (054c 02ea)
+https://zadig.akeo.ie/
 
+Run the executable
 
 ## Usage
 
